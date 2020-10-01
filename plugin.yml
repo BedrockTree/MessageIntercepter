@@ -1,0 +1,10 @@
+name: MessageIntercepter
+main: com.frank.main.Main
+version: 1.0.0
+author: Frank__Wang
+commands:
+  InterceptList:
+    description: 获取插件屏蔽关键词
+  AddIntercept:
+    description: 添加关键词到config
+    permission: admin
