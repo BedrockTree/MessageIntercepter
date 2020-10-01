@@ -14,6 +14,7 @@ public class InterceptList implements CommandExecutor {
                 if (commandSender instanceof Player){
                         Player player = (Player)commandSender;
                         String playerName = player.getName();
+                        player.sendMessage(ChatColor.RED + "屏蔽词列表：");
                         for(String a:plugin.getConfig().getStringList("InterceptList")){
                                 player.sendMessage(ChatColor.YELLOW + a);
                         }
