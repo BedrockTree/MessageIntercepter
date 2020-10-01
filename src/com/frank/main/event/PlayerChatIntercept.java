@@ -19,7 +19,7 @@ public class PlayerChatIntercept implements Listener{
                         if (event.getMessage().contains(a)){
                                 event.setCancelled(true);
                                 if (event.isCancelled() == true){
-                                        Log.warn(playerName + "尝试发送敏感词，已拦截，原内容："+message);
+                                        plugin.getLogger().warning(playerName + "尝试发送敏感词，已拦截，原内容："+message);
                                         player.sendMessage(ChatColor.RED + "注意规范用语");
 
                                 }

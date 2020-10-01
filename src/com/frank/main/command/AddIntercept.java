@@ -1,6 +1,5 @@
 package com.frank.main.command;
 
-import com.frank.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -27,10 +26,10 @@ public class AddIntercept implements CommandExecutor {
                         if (commandSender instanceof Player) {
                                 commandSender.sendMessage(ChatColor.RED + "成功将" + strings[0] + "加入到屏蔽词列表");
                         } else {
-                                Log.info("成功将" + strings[0] + "加入到屏蔽词列表");
+                                plugin.getLogger().info("成功将" + strings[0] + "加入到屏蔽词列表");
                         }
-                        Bukkit.broadcastMessage(net.md_5.bungee.api.ChatColor.RED +commandSender.getName() + "将" + strings[0] + "加入了屏蔽词列表，请注意\n");
-                        Log.warn(commandSender.getName() + "将" + strings[0] + "加入了屏蔽词列表");
+                        Bukkit.broadcastMessage(ChatColor.RED +commandSender.getName() + "将" + strings[0] + "加入了屏蔽词列表，请注意\n");
+                        plugin.getLogger().warning(commandSender.getName() + "将" + strings[0] + "加入了屏蔽词列表");
                         plugin.saveConfig();
                         plugin.saveDefaultConfig();
                         plugin.reloadConfig();
