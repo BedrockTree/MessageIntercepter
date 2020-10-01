@@ -8,3 +8,11 @@ commands:
   AddIntercept:
     description: 添加关键词到config
     permission: admin
+permissions:
+  messageintercepter.commands.*:
+    description: MessageIntercepter's commands permission
+    children:
+      messageintercepter.commands.addintercept: true
+  messageintercepter.commands.addintercept:
+    description: Add keywords to the intercept list
+    default: op
